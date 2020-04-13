@@ -3,13 +3,20 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <script src="./js/bundle.js">
-
-    </script>
+    <script src="./js/bundle.js"></script>
+    <link rel="stylesheet" href="../css/main.css">
   </head>
   <body>
     <div id="app">
+      <ul>
+        <li v-for="item in todos">{{ item }}</li>
+      </ul>
 
+      <form v-on:submit.prevent="saveNewItem">
+        <label for="new-item">Add a new chore to list:</label>
+        <input id="new-item" type="text" v-model="newItem" />
+        <input type="submit" value ="Save New Item" />
+      </form>
     </div>
   </body>
 </html>
