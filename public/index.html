@@ -9,9 +9,10 @@
   <body>
     <div id="app">
       <ul>
-        <li v-for="item in todos">
+        <li v-for="(item, index) in todos">
           <span>{{ item.name }}</span>
           <span v-if="item.done">Done!</span>
+          <button v-on:click="doItem(index)" v-else>To Do</button>
         </li>
       </ul>
 

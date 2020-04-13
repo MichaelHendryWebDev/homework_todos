@@ -14,3 +14,9 @@ li {
   justify-content: space-between;
   border: 1px solid lightgrey;
 }
+
+button {
+  background-color: lightblue;
+  border: 2px solid blue;
+  width: 10rem;
+}

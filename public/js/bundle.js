@@ -150,7 +150,7 @@ eval("var g;\n\n// This works in non-strict mode\ng = (function() {\n\treturn th
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ \"./node_modules/vue/dist/vue.esm.js\");\n\n\ndocument.addEventListener('DOMContentLoaded', () => {\n  new vue__WEBPACK_IMPORTED_MODULE_0__[\"default\"]({\n    el: \"#app\",\n    data: {\n      todos: [\n      {name: \"post letter\", done: false},\n      {name: \"feed dog\", done: true},\n      {name: \"paint door\", done: false}\n    ],\n      newItem: \"\"\n    },\n    methods: {\n      saveNewItem: function() {\n        this.todos.push(this.newItem);\n        this.newItem = \"\";\n      }\n    }\n    });\n  });\n\n\n//# sourceURL=webpack:///./src/app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ \"./node_modules/vue/dist/vue.esm.js\");\n\n\ndocument.addEventListener('DOMContentLoaded', () => {\n  new vue__WEBPACK_IMPORTED_MODULE_0__[\"default\"]({\n    el: \"#app\",\n    data: {\n      todos: [\n      {name: \"post letter\", done: false},\n      {name: \"feed dog\", done: true},\n      {name: \"paint door\", done: false}\n    ],\n      newItem: \"\"\n    },\n    methods: {\n      saveNewItem: function() {\n        this.todos.push({\n          name: this.newItem,\n          done: false\n        });\n        this.newItem = \"\";\n      },\n      doItem: function(index) {\n        this.todos[index].done = true;\n      }\n    }\n    });\n  });\n\n\n//# sourceURL=webpack:///./src/app.js?");
 
 /***/ })
 

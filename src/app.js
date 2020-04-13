@@ -13,8 +13,14 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     methods: {
       saveNewItem: function() {
-        this.todos.push(this.newItem);
+        this.todos.push({
+          name: this.newItem,
+          done: false
+        });
         this.newItem = "";
+      },
+      doItem: function(index) {
+        this.todos[index].done = true;
       }
     }
     });
