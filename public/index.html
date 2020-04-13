@@ -9,7 +9,10 @@
   <body>
     <div id="app">
       <ul>
-        <li v-for="item in todos">{{ item }}</li>
+        <li v-for="item in todos">
+          <span>{{ item.name }}</span>
+          <span v-if="item.done">Done!</span>
+        </li>
       </ul>
 
       <form v-on:submit.prevent="saveNewItem">

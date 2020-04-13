@@ -5,9 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
     el: "#app",
     data: {
       todos: [
-      "post letter",
-      "feed dog",
-      "paint door"
+      {name: "post letter", done: false},
+      {name: "feed dog", done: true},
+      {name: "paint door", done: false}
     ],
       newItem: ""
     },
